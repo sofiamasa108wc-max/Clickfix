@@ -1,0 +1,55 @@
+{
+  "geode": "v5.11.2",
+  "gd": { "android": "2.2081" },
+  "id": "clickfix.android",
+  "name": "ClickFix",
+  "version": "v0.1.0-alpha.1",
+  "developer": "ClickFix contributors",
+  "description": "Experimental ClickFix settings prototype for Geometry Dash Android.",
+  "settings": {
+    "enabled": {
+      "name": "Enable ClickFix",
+      "description": "Master switch for ClickFix. The input correction engine is not implemented in this prototype.",
+      "type": "bool",
+      "default": false
+    },
+    "mode-title": {
+      "type": "title",
+      "name": "Correction modules"
+    },
+    "input-buffer": {
+      "name": "Input Buffer",
+      "description": "Prototype toggle; does not buffer gameplay inputs yet.",
+      "type": "bool",
+      "default": true,
+      "enable-if": "enabled"
+    },
+    "click-correction": {
+      "name": "Click Correction",
+      "description": "Prototype toggle; click timing correction is not implemented yet.",
+      "type": "bool",
+      "default": true,
+      "enable-if": "enabled"
+    },
+    "tolerance": {
+      "name": "Tolerance (ms)",
+      "description": "Planned correction window. Current prototype only saves this setting.",
+      "type": "int",
+      "default": 100,
+      "min": 0,
+      "max": 100,
+      "control": { "slider": true },
+      "enable-if": "enabled"
+    },
+    "scope-title": {
+      "type": "title",
+      "name": "Compatibility"
+    },
+    "all-modes": {
+      "name": "All game modes",
+      "description": "Intended to support all modes. Not yet validated by gameplay hooks.",
+      "type": "bool",
+      "default": true
+    }
+  }
+}
